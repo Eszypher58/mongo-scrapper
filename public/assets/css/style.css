@@ -1,0 +1,106 @@
+body{
+
+    background-color: #EEE;
+
+}
+
+.nav {
+
+    font-size: 20px;
+
+}
+
+.navbar-brand {
+
+    font-size: 32px;
+
+}
+
+.btn-warning {
+    
+        font-size: 20px;
+        margin-top: 5px;
+    
+}
+
+#img1 {
+    
+        background: url("../media/bg.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          height: 75vh;
+        margin-bottom: 50px;
+    
+}
+
+.headerblock {
+
+    margin-top: 15%;
+
+}
+
+h1 {
+
+    text-align: center;
+
+}
+
+.headerblock > h1 {
+
+    font-size: 64px;
+    color: #FFF;
+
+}
+
+.headerblock > p {
+    
+        font-size: 32px;
+        color: #FFF;
+        text-align: center;
+    
+}
+
+h4 {
+
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+h5 {
+
+    font-style: italic;
+
+}
+
+p {
+    
+        font-size: 18px;
+        
+}
+
+.media-object {
+
+    width: 130px;
+
+}
+
+.saveButton {
+
+    float: right;
+
+}
+
+.removeButton {
+    
+        float: right;
+    
+}
+
+.noteButton {
+    
+        float: left;
+    
+}

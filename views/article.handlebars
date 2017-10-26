@@ -1,0 +1,28 @@
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-10 col-md-offset-1">
+
+            {{#each data}}
+            <div class="media">
+                <div class="media-left">
+                    <a target="_black" href={{this.url}}>
+                    <img class="media-object" src={{this.img}} alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{this.title}}</h4>
+                    <h5>{{this.date}}</h5>
+                    <p>{{this.summary}}</p>
+                    <button class="btn btn-success saveButton" data_value={{this._id}}>Save Article</button>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+
+    </div>
+
+
+</div>

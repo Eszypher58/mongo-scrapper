@@ -1,0 +1,55 @@
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-10 col-md-offset-1">
+
+            {{#each data}}
+            <div class="media">
+                <div class="media-left">
+                    <a target="_black" href={{this.url}}>
+                    <img class="media-object" src={{this.img}} alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{this.title}}</h4>
+                    <h5>{{this.date}}</h5>
+                    <p>{{this.summary}}</p>
+                    <button class="btn btn-success noteButton" data_value={{this._id}}>Article Note</button>
+                    <button class="btn btn-danger removeButton" data_value={{this._id}}>Remove Article</button>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+
+    </div>
+
+
+</div>
+
+{{#each data}}
+        <div class="modal fade" id={{this._id}} tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">{{this.title}}</h4>
+                </div>
+
+                <div class="note"></div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Add Notes</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default closeNote" data_value={{this._id}} data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary submitNote" data_value={{this._id}}>Submit</button>
+                </div>
+                </div>
+            </div>
+        </div>
+{{/each}}
