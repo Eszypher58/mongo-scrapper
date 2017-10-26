@@ -3,11 +3,13 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var mongoose = require("mongoose");
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 var app = express();
 
 var db = require("./models");
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 app.use(express.static("public"));
 
@@ -38,7 +40,7 @@ app.get("/", function(req, res){
 */
 
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/article", { useMongoClient: true });
+mongoose.connect(MONGODB_URI, { useMongoClient: true });
 
 app.listen(port, function(error){
 
